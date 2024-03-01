@@ -62,14 +62,14 @@ The application will consist of five pages:
     - `email`: String (required, must be a valid email format)
     - `password`: String (required, minimum 8 characters)
   - **Response:**
-    - On success, returns a JSON object with user information and a token.
+    - On success, returns a JSON object with message that user is created, you have to take the user to login page.
     - On failure, returns an error message indicating the reason for failure.
 - **POST /auth/login:**
   - **Request Body:**
     - `email`: String (required)
     - `password`: String (required, minimum 8 characters)
   - **Response:**
-    - On success, returns a JSON object containing a token.
+    - On success, returns a JSON object containing a token and user information.
     - On failure, returns an error message indicating the reason for failure.
 - **POST /auth/update:** (requires authentication)
   - **Request Body:** (can be any combination of the following)
@@ -96,3 +96,4 @@ The application will consist of five pages:
 - Use the provided logo in the `assets
 - Must have a loading indicator showing user that api is being called
 - There must a logout button to logout the user
+- Header must have email or name and an icon which opens a dropdown which will have logout button
